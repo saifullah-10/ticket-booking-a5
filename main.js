@@ -3,31 +3,78 @@ const totalSeatValue = document.getElementById("totalSeatValue");
 const updateSeats = document.getElementById("updateSeats");
 const totalAmount = document.getElementById("totalAmount");
 const show = document.getElementById("show");
+const seatDecrease = document.getElementById("seatDecrease");
 const cupponName = document.getElementById("cupponName");
+const cupponApplybtn = document.getElementById("cupponApplybtn");
+const cupponHidden = document.getElementById("cupponHidden");
+const discountAmountShow = document.getElementById("discountAmountShow");
+const grandTotal = document.getElementById("grandTotal");
+const phoneNumber = document.getElementById("phoneNumber");
+const submit = document.getElementById("submit");
+const hideElement = document.getElementById("hideElement");
+const successShow = document.getElementById("successShow");
+const defaultValue = document.getElementById("defaultValue");
 let seatLimit = 0;
 let fairCalculateOrder = 1;
 const arrs = [];
-
+phoneNumber.addEventListener("change", () => {
+  if (phoneNumber.value.toString().length === 11 && arrs.length === 0) {
+    submit.removeAttribute("disabled");
+  }
+});
 // function area
-const cupponCalculation = (amountNum) => {
-  show.classList.remove("hidden");
-  cupponName.addEventListener("input", () => {
-    if (cupponName.value === "NEW15") {
-      const discount15 = (amountNum * 15) / 100;
-      console.log(discount15);
-    } else if (cupponName.value === "Couple 20") {
+const validNumber = (sub) => {
+  phoneNumber.addEventListener("input", () => {
+    let isValue;
+    const contostr = phoneNumber.value.toString();
+    if (arrs.length === 0) {
+      isValue = false;
+    } else if (contostr.length === 11) {
+      isValue = true;
     } else {
-      console.log("invalid");
+      isValue = false;
+    }
+    if (isValue) {
+      sub.removeAttribute("disabled");
+    } else {
+      sub.setAttribute("disabled", true);
     }
   });
+};
+
+const cupponCalculation = (amountNum) => {
+  show.classList.remove("hidden");
+
+  if (cupponName.value === "NEW15") {
+    const discount15 = (amountNum * 15) / 100;
+    return discount15;
+  } else if (cupponName.value === "Couple 20") {
+    const discount20 = (amountNum * 20) / 100;
+    return discount20;
+  } else {
+    show.classList.add("hidden");
+    return "Invalid";
+  }
 };
 const calculateTotalAmount = () => {
   let amount = arrs.length * 550;
   totalAmount.innerText = amount;
+  grandTotal.innerText = amount;
   if (amount > 1650) {
     cupponName.removeAttribute("disabled");
-    cupponCalculation(amount);
+    cupponApplybtn.removeAttribute("disabled");
+    cupponApplybtn.addEventListener("click", () => {
+      const discountValue = cupponCalculation(amount);
+      discountAmountShow.innerText = discountValue;
+      grandTotal.innerText = amount - discountValue;
+      if (discountValue === "Invalid") {
+        grandTotal.innerText = amount;
+        alert("Invalid Code");
+      }
+      cupponHidden.classList.add("hidden");
+    });
   }
+  validNumber(submit);
 };
 const seatUpdate = () => {
   if (seatLimit > 3) {
@@ -44,6 +91,7 @@ const seatUpdate = () => {
     calculateTotalAmount();
   }
 };
+
 const displayLength = () => {
   totalSeatValue.innerText = arrs.length;
   seatUpdate();
@@ -56,13 +104,24 @@ for (const seat of seats) {
       alert("already selected");
       e.target.classList.add("disabled");
     } else if (arrs.length > 3) {
-      alert("You Already Select 4 Seats");
+      alert("You Already Selected 4 Seats");
       e.target.classList.add("disabled");
     } else {
       arrs.push(value);
-      e.target.style.backgroundColor = "red";
+      defaultValue.classList.add("hidden");
+      e.target.style.backgroundColor = "#1DD100";
       e.target.classList.add("disabled");
+      seatDecrease.innerText = 40 - arrs.length;
     }
-    displayLength(); // Call the function to update the length
+    for (const arr of arrs) {
+      if (arrs.includes(arr)) {
+        e.target.setAttribute("disabled", true);
+      }
+    }
+    displayLength();
   });
 }
+submit.addEventListener("click", () => {
+  hideElement.classList.add("hidden");
+  successShow.classList.remove("hidden");
+});

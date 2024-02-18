@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Greenline Ticket Booking System</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="main.css" class="css">
@@ -21,12 +21,98 @@
 </head>
 
 <body>
-    <header class="max-w-[1440px] w-[80%] mx-auto"></header>
-    <main>
+    <!-- header start -->
 
+    <header class="max-w-[1440px] mx-auto">
+        <div class="w-[82%] mx-auto my-3">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Item 1</a></li>
+                            <li>
+                                <a>Parent</a>
+
+                            </li>
+                            <li><a>Item 3</a></li>
+                        </ul>
+                    </div>
+                    <a class=" font-[Raleway] font-extrabold text-[36px]"><span
+                            class="text-[#1DD100]">Green</span><span>Line</span></a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 font-[Raleway] text-lg font-medium text-[#030712b3]">
+                        <li><a>Home</a></li>
+                        <li>
+                            <a>About</a>
+                        </li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end ">
+                    <a href="#"
+                        class="flex gap-2 font[Raleway] text-xl px-5 py-4 border-2 rounded-xl font-bold text-[#1DD102] bg-[#1dd1001a] border-[#1dd10066]"><span>BUS</span><img
+                            src="./images/headerbus.svg" alt="Image"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header stop -->
+    <main>
+        <!-- hero start -->
+        <section class="max-w-[1440px] mx-auto mb-20 ">
+            <div class="w-[82%] mx-auto relative">
+                <div class="hero bg-cover rounded-3xl" style="background-image: url(./images/heroimage.jpg);">
+                    <div class="hero-overlay bg-opacity-30 rounded-3xl "></div>
+                    <div class="w-[70%]">
+                        <div class="my-40 flex flex-col items-center">
+                            <h1 class="mb-5 text-5xl font-bold flex flex-col text-center"><span>End-to-End Travel
+                                    with</span><span>GreenLine
+                                    Paribahan</span></h1>
+                            <p class="mb-5 text-center">Yes, you can run unit tests and view the results directly within
+                                the app. The integrated testing features allow for a streamlined .</p>
+                            <button class="">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-around w-full absolute -bottom-7">
+                    <div class="bg-white px-10 py-3 border-b-4 border-[#1DD100] rounded-3xl flex">
+                        <img src="./images/carduser.svg" alt="carduser">
+                        <div>
+                            <h1>500K+</h1>
+                            <p>Registered users</p>
+                        </div>
+                    </div>
+                    <div class="bg-white px-20 py-3 border-b-4 border-[#1DD100] rounded-3xl">
+                        <img src="./images/carduser.svg" alt="carduser">
+                        <div>
+                            <h1></h1>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="bg-white px-20 py-3 border-b-4 border-[#1DD100] rounded-3xl">
+                        <img src="./images/carduser.svg" alt="carduser">
+                        <div>
+                            <h1></h1>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- hero stop -->
         <!-- ticket information section -->
-        <section class="max-w-[1440px] bg-[#F7F8F8] mx-auto">
-            <div class="w-full mx-auto p-10  ">
+        <section class="max-w-[1440px] bg-[#F7F8F8] mx-auto rounded-[88px_88px_0_0] border-t-8 border-[#1DD100]">
+            <div class="w-[82%] mx-auto py-10  ">
 
                 <div class="w-[60%] flex justify-center items-center mx-auto mb-12 mt-16">
                     <div class="text-center">
@@ -91,8 +177,8 @@
         </section>
         <!-- ticket information section -->
         <!-- booking section -->
-        <section id="hideElement" class="max-w-[1440px] w-[80%] mx-auto">
-            <div class="w-full p-10  bg-[#F7F8F8] ">
+        <section id="hideElement" class="max-w-[1440px] bg-[#F7F8F8] mx-auto">
+            <div class="w-[82%] mx-auto py-10 ">
                 <div class="bg-white py-8 rounded-3xl flex">
                     <div class="w-[50%] px-6 border-r-2 border-dashed border-[#0307124d]">
                         <div class="flex flex-col gap-2">
@@ -343,7 +429,7 @@
                         hard to find the best service and deals for
                         you.</p>
                     <p class="text-xl font-normal text-[#4A4A4A]">Shortly you will find a confirmation in your email</p>
-                    <a href="http://127.0.0.1:5500/index.html"><button
+                    <a href="https://saifullah-10.github.io/ticket-booking-a5/"><button
                             class="mt-5 px-16 py-4 bg-[#27AE60] rounded-[28px] text-xl font-semibold text-white">Continue</button></a>
                 </div>
             </div>

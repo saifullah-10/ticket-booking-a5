@@ -452,7 +452,7 @@
                                 <input type="email" placeholder="Enter your email id"
                                     class="grow border p-4 outline-none rounded-xl border-[#0307121a]">
                             </label>
-                            <button id="submit"
+                            <button id="submit" onclick="my_modal_3.showModal()"
                                 class="w-full py-5 bg-[#1DD100] rounded-xl font-[Raleway] text-xl text-[#fff] font-extrabold disabled:bg-slate-400"
                                 disabled>Next</button>
                         </div>
@@ -469,24 +469,33 @@
             </div>
         </section>
         <!-- booking section  -->
-        <!-- success section -->
-        <section id="successShow" class="max-w-[1440px] bg-[#F7F8F8] mx-auto mb-20 pb-20 hidden">
-            <div class="w-[70%] mx-auto bg-white flex justify-center items-center rounded-xl ">
-                <div class="py-20 flex flex-col items-center gap-3 font-[Roboto] w-[70%]">
-                    <img src="./images/success.svg" alt="success">
-                    <h2 class=" text-2xl font-bold text-[#27AE60]">SUCCESS</h2>
-                    <p class="text-xl font-medium text-[#4A4A4A] text-center">Thank you for Booking Our Bus Seats. We
-                        are working
-                        hard to find the best service and deals for
-                        you.</p>
-                    <p class="text-xl font-normal text-[#4A4A4A]">Shortly you will find a confirmation in your email</p>
-                    <a href="https://saifullah-10.github.io/ticket-booking-a5/"><button
-                            class="mt-5 px-16 py-4 bg-[#27AE60] rounded-[28px] text-xl font-semibold text-white">Continue</button></a>
+        <!-- modal section -->
+        <section>
+            <dialog id="my_modal_3" class="modal">
+                <div class="modal-box">
+                    <form method="dialog">
+                        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                    </form>
+                    <div class="w-full mx-auto bg-white flex justify-center items-center rounded-xl ">
+                        <div class="py-20 flex flex-col items-center gap-3 font-[Roboto] w-full">
+                            <img src="./images/success.svg" alt="success">
+                            <h2 class=" text-2xl font-bold text-[#27AE60]">SUCCESS</h2>
+                            <p class="text-xl font-medium text-[#4A4A4A] text-center">Thank you for Booking Our Bus
+                                Seats. We
+                                are working
+                                hard to find the best service and deals for
+                                you.</p>
+                            <p class="text-xl font-normal text-[#4A4A4A]">Shortly you will find a confirmation in your
+                                email</p>
+                            <a href="https://saifullah-10.github.io/ticket-booking-a5/"><button
+                                    class="mt-5 px-16 py-4 bg-[#27AE60] rounded-[28px] text-xl font-semibold text-white">Continue</button></a>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </dialog>
         </section>
-        <!-- success section -->
 
+        <!-- modal section -->
     </main>
     <!-- footer start -->
     <footer class="max-w-[1440px] mx-auto bg-[#030712]">

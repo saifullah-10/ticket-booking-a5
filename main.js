@@ -12,19 +12,21 @@ const grandTotal = document.getElementById("grandTotal");
 const phoneNumber = document.getElementById("phoneNumber");
 const submit = document.getElementById("submit");
 const hideElement = document.getElementById("hideElement");
-const successShow = document.getElementById("successShow");
+
 const defaultValue = document.getElementById("defaultValue");
 const smoothScrollBtn = document.getElementById("smoothScroll");
 const route = document.getElementById("route");
 let seatLimit = 0;
 let fairCalculateOrder = 1;
 const arrs = [];
-phoneNumber.addEventListener("change", () => {
-  if (phoneNumber.value.toString().length === 11 && arrs.length === 0) {
+
+// function area
+const numValid = () => {
+  console.log(phoneNumber.value.toString().length);
+  if (phoneNumber.value.toString().length === 11) {
     submit.removeAttribute("disabled");
   }
-});
-// function area
+};
 const validNumber = (sub) => {
   phoneNumber.addEventListener("input", () => {
     let isValue;
@@ -72,6 +74,7 @@ const calculateTotalAmount = () => {
       if (discountValue === "Invalid") {
         grandTotal.innerText = amount;
         alert("Invalid Code");
+        return;
       }
       cupponHidden.classList.add("hidden");
     });
@@ -120,13 +123,12 @@ for (const seat of seats) {
         e.target.setAttribute("disabled", true);
       }
     }
+
     displayLength();
+    numValid();
   });
 }
-submit.addEventListener("click", () => {
-  hideElement.classList.add("hidden");
-  successShow.classList.remove("hidden");
-});
+
 smoothScrollBtn.addEventListener("click", () => {
   let targetId = document.getElementById(
     smoothScrollBtn.getAttribute("data-link")

@@ -72,38 +72,44 @@
         <section class="max-w-[1440px] mx-auto mb-20 ">
             <div class="w-[82%] mx-auto relative">
                 <div class="hero bg-cover rounded-3xl" style="background-image: url(./images/heroimage.jpg);">
-                    <div class="hero-overlay bg-opacity-30 rounded-3xl "></div>
+                    <div class="hero-overlay bg-opacity-50 rounded-3xl "></div>
                     <div class="w-[70%]">
                         <div class="my-40 flex flex-col items-center">
-                            <h1 class="mb-5 text-5xl font-bold flex flex-col text-center"><span>End-to-End Travel
-                                    with</span><span>GreenLine
-                                    Paribahan</span></h1>
-                            <p class="mb-5 text-center">Yes, you can run unit tests and view the results directly within
-                                the app. The integrated testing features allow for a streamlined .</p>
-                            <button class="">Get Started</button>
+                            <h1 class="mb-5 text-5xl font-bold flex flex-col text-center">
+                                <span class="font-[Raleway] text-[50px] font-extrabold text-white">WELCOME</span><span
+                                    class="text-[#1DD100]">GreenLine
+                                    Paribahan</span>
+                            </h1>
+                            <p class="mb-5 text-center text-lg text-white">Welcome to our E-ticketing system. You can
+                                easily purchase your travel ticket from home.</p>
+                            <a data-link="route" id="smoothScroll"><button
+                                    class=" px-6 py-4 bg-[#1DD100] rounded-xl font-bold text-xl">Buy
+                                    Tickets</button></a>
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-around w-full absolute -bottom-10">
-                    <div class="bg-white px-10 py-3 border-b-4 border-[#1DD100] rounded-3xl flex gap-4">
-                        <img src="./images/carduser.svg" alt="carduser">
-                        <div class="flex flex-col gap-3">
-                            <h1>500K+</h1>
-                            <p>Registered users</p>
+                <div class="w-[90%] mx-auto relative">
+                    <div class="w-full grid grid-cols-3 gap-10 absolute -bottom-10 font-[Inter]">
+                        <div class="bg-white px-8 py-3 border-b-4 border-[#1DD100] rounded-3xl flex gap-4">
+                            <img src="./images/carduser.svg" alt="carduser">
+                            <div class="flex flex-col gap-3">
+                                <h1 class="text-4xl font-bold text-[#030712]">500K+</h1>
+                                <p class="text-lg text-[#03071299]">Registered users</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="bg-white px-10 py-3 border-b-4 border-[#1DD100] rounded-3xl flex gap-4">
-                        <img src="./images/heroticket.svg" alt="carduser">
-                        <div class="flex flex-col gap-3">
-                            <h1>1.7 lacks</h1>
-                            <p>Tickets sold</p>
+                        <div class="bg-white px-8 py-3 border-b-4 border-[#1DD100] rounded-3xl flex gap-4">
+                            <img src="./images/heroticket.svg" alt="carduser">
+                            <div class="flex flex-col gap-3">
+                                <h1 class="text-4xl font-bold text-[#030712]">1.7 lacks</h1>
+                                <p>Tickets sold</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="bg-white px-10 py-3 border-b-4 border-[#1DD100] rounded-3xl flex gap-4">
-                        <img src="./images/heropartner.svg" alt="carduser">
-                        <div class="flex flex-col gap-3">
-                            <h1>80K+</h1>
-                            <p>Rental partners</p>
+                        <div class="bg-white px-8 py-3 border-b-4 border-[#1DD100] rounded-3xl flex gap-4">
+                            <img src="./images/heropartner.svg" alt="carduser">
+                            <div class="flex flex-col gap-3">
+                                <h1 class="text-4xl font-bold text-[#030712]">80K+</h1>
+                                <p>Rental partners</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -154,15 +160,18 @@
         </section>
         <!-- coupon stop  -->
         <!-- ticket information section -->
-        <section class="max-w-[1440px] bg-[#F7F8F8] mx-auto rounded-[88px_88px_0_0] border-t-8 border-[#1DD100]">
+        <section id="route"
+            class="max-w-[1440px] bg-[#F7F8F8] mx-auto rounded-[88px_88px_0_0] border-t-8 border-[#1DD100]">
             <div class="w-[82%] mx-auto py-10  ">
 
                 <div class="w-[60%] flex justify-center items-center mx-auto mb-12 mt-16">
                     <div class="text-center">
-                        <h1 class=" text-4xl font-bold font-[Raleway] text-[#030712] mb-5">P.H Paribahan</h1>
-                        <p class="font-[Inter] text-lg font-normal leading-7 ">Yes, you can run unit tests and view the
-                            results directly within the app. The integrated testing
-                            features allow for a streamlined .</p>
+                        <h1 class=" text-4xl font-bold font-[Raleway] text-[#030712] mb-5"><span
+                                class="text-[#1DD100]">GreenLine
+                                Paribahan</span></h1>
+                        <p class="font-[Inter] text-lg font-normal leading-7 ">This is our online ticket booking
+                            section. Choose your destination and buy your ticket. Happy Journey...
+                        </p>
                     </div>
                 </div>
                 <div class="w-full flex bg-white rounded-3xl p-8 relative">
@@ -384,8 +393,7 @@
                     <div class="am w-[50%] px-6">
                         <h1
                             class="font-[Raleway] text-2xl font-semibold pb-5 border-b border-[#0307124d] border-dashed">
-                            Select
-                            Your Seat
+                            Seat Information
                         </h1>
                         <div class="p-8 bg-[#F7F8F8] rounded-xl my-6">
                             <div class="flex justify-between border-b border-[#0307124d] border-dashed pb-5">
@@ -498,7 +506,7 @@
             </div>
 
             <div class="flex justify-between">
-                <p class="text-[#ffffffb3] font-[Inter]"> <span>&copy;</span> all rights reserved, P-Ticket services
+                <p class="text-[#ffffffb3] font-[Inter]"> <span>&copy;</span> all rights reserved, GreenLine services
                     limited.2024</p>
                 <ul class="flex font-[Inter] font-medium text-white gap-8">
                     <a href="#">

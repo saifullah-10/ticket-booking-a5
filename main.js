@@ -14,6 +14,8 @@ const submit = document.getElementById("submit");
 const hideElement = document.getElementById("hideElement");
 const successShow = document.getElementById("successShow");
 const defaultValue = document.getElementById("defaultValue");
+const smoothScrollBtn = document.getElementById("smoothScroll");
+const route = document.getElementById("route");
 let seatLimit = 0;
 let fairCalculateOrder = 1;
 const arrs = [];
@@ -124,4 +126,10 @@ for (const seat of seats) {
 submit.addEventListener("click", () => {
   hideElement.classList.add("hidden");
   successShow.classList.remove("hidden");
+});
+smoothScrollBtn.addEventListener("click", () => {
+  let targetId = document.getElementById(
+    smoothScrollBtn.getAttribute("data-link")
+  );
+  targetId.scrollIntoView({ behavior: "smooth", block: "start" });
 });
